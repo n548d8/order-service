@@ -21,8 +21,12 @@ public class OrderServiceApplication {
 
     @GetMapping
     public List<Order> fetchOrders() {
+    	// sorted​(Comparator<? super T> comparator)	
+    	// Returns a stream consisting of the elements of this stream, sorted according to the provided Comparator.
+    	// comparing​(Function<? super T,​? extends U> keyExtractor)	
+    	// Accepts a function that extracts a Comparable sort key from a type T, and returns a Comparator<T> that compares by that sort key.
         return orderDao.getOrders().stream().
-                sorted(Comparator.comparing(Order::getPrice)).collect(Collectors.toList());
+                sorted(Comparator.comparing(Order::getName)).collect(Collectors.toList());
     }
 
     public static void main(String[] args) {

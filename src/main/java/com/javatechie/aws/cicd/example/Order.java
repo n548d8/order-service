@@ -5,6 +5,7 @@ package com.javatechie.aws.cicd.example;
 //@AllArgsConstructor
 //@NoArgsConstructor
 //@ToString
+//test
 public class Order {
 
     public Order() {
